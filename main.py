@@ -58,19 +58,18 @@ if __name__ == '__main__':
     token = os.environ['BITLY_TOKEN']
 
     parser = argparse.ArgumentParser(
-        description='Сокращение ссылок или выдача кол-ва кликов по ней'
+        description='Link shortener and clicks calculator'
         )
-    parser.add_argument('name', help='Ваше имя')
+    parser.add_argument('url', help='Enter link')
     url = parser.parse_args()
 
-    # url = input('Введите ссылку: ')
     if is_bitlink(url, token):
         try:
-            print('Перешли:', count_clicks(url, token), 'раз(а)')
+            print('clicked:', count_clicks(url, token), 'time(s)')
         except requests.exceptions.HTTPError:
-            print('Ошибка в подсчете')
+            print('Err while calculating clicks')
     else:
         try:
-            print('Битлинк:', shorten_link(url, token))
+            print('Bitlink:', shorten_link(url, token))
         except requests.exceptions.HTTPError:
-            print('Ошибка в сокращении')
+            print('Err while creating bitlink')
