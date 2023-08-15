@@ -36,7 +36,7 @@ def is_bitlink()
 
 1. parses given link
 1. gets information about link
-1. returns `True` if link is shortened or `False` if link isn't 
+1. returns `True` if link is shortened or `False` if link isn't  
 
 ```py
 def count_clicks()
@@ -52,4 +52,4 @@ def shorten_link()
 ```
 
 1. uses unshortened link and tries to short it
-1. raises for status, if successfully gets link from response text and returs it
+1. raises for status, if successfully gets link from response text and returs it 
