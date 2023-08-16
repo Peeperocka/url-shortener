@@ -16,6 +16,14 @@ pip install -r requirements.txt
 
 ## Run
 
+To run program on Windows OS you should use [this](https://www.wikihow.com/Use-Windows-Command-Prompt-to-Run-a-Python-File)
+
+To run program on Linux head to main.py file's directory and type:
+
+```
+python main.py {url}
+```
+
 Depending on whether you give it shortened link or unshortened, it will:
 
 - give you shortened link clicks count
@@ -26,7 +34,7 @@ If program will run into an error, it will print:
 - `Err while creating bitlink` if program was tring to shorten ur link
 - or `Err while calculating clicks` if program war tring to count clicks
 
-## Notes 
+## Notes
 
 Some info about all fuctions in code
 
@@ -44,12 +52,11 @@ def count_clicks()
 
 1. parses link
 1. gets info about link and gets clicks_count from link info
-1. returns it
-    1. if func runs into an error while raising for status it'll print error
+1. returns it. If func runs into an error while raising for status it'll print error message
 
 ```py
 def shorten_link()
 ```
 
 1. uses unshortened link and tries to short it
-1. raises for status, if successfully gets link from response text and returs it 
+1. raises for status, if successfully, gets link from response text and returns it
